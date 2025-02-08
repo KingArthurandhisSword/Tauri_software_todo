@@ -1,0 +1,174 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: absolute;
+  overflow: hidden;
+  align-items: center;
+  justify-content: left;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  text-align: center;
+  -webkit-app-region: drag; /* 🔹 Koko sovellus raahattava */
+  user-select: none; /* 🔹 Estää tekstin valinnan raahatessa */
+}
+
+/* 🔹 Koko sovelluksen rakenne kahteen kolumniin */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* 🔹 Molemmat sarakkeet */
+.task-column, .note-column {
+  width: 500px; /* Säädä sopivaksi */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+textarea {
+  margin-top: -30px;
+  width: 70%;
+  height: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+  resize: none;
+  -webkit-app-region: no-drag;
+}
+
+.title-image {
+  width: 40%;      /* Muuta sopivaksi */
+  height: -20px;
+  margin-top: -75px;  /* Lisää väliä */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* 🔹 Syöttökenttä */
+input {
+  padding: 8px;
+  width: 300px;
+  font-size: 16px;
+  margin-top: -90px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+  color: black;
+  border-radius: 30px;
+  -webkit-app-region: no-drag;
+}
+
+/* 🔹 Kaikki painikkeet */
+button {
+  padding: 9px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-app-region: no-drag;
+}
+
+button:hover {
+  background-color: #5a493c;
+}
+
+
+.add-btn {
+  background-color: #ffffff;
+  color: white;
+  margin-left: -75px;
+  border: #ffffff;
+}
+
+.add-btn:hover {
+  background-color: #ffffff;
+}
+  */
+
+ul {
+  padding: 0;
+}
+
+/* 🔹 Tehtävälista */
+li {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 10px;
+  margin-left: 10%;
+  width: 300px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+li:hover {
+  background: #dbd0b6;
+}
+
+/* 🔹 Kun tehtävä on merkitty tehdyksi, se saa yliviivauksen */
+li.completed {
+  color: #999;
+}
+
+li span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* 🔹 Ympyränappi (tehtävän valinta) */
+.check-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #775F4E;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+  color: transparent;
+}
+
+/* 🔹 Kun tehtävä on valmis, ympyrä muuttuu */
+li.completed .check-btn {
+  background-color: #775F4E;
+  color: white;
+  font-weight: bold;
+}
+
+/* 🔹 Poistonappi */
+.delete-btn {
+  margin-right: -15px;
+  background-color: transparent;
+  color: white;
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 50%;
+  border-color: rgb(158, 128, 99);
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0);
+}
+
+/* 🔹 Poistonappi hover-efekti */
+.delete-btn:hover {
+  background-color: rgb(136, 119, 119);
+}
+
